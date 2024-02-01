@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    font-size: 62.5%;
+
+    /* Colors */
+    --primary1: #e4e2e2;
+    --text-color1: #181818;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+    color: var(--text-color1);
+    position: relative;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: absolute;
+    background: #000000b4;
+    width: 100%;
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    color: orange;
+    font-weight: 900;
+}
+
+/* Header */
+.header {
+    background: var(--primary1);
+    padding: 20px;
+    box-shadow: 0 0 5px 2px #08080891;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu__item {
+    /* transition: .3s ease-in-out; */
+}
+
+.navbar .menu__item a {
+    font-weight: 500;
+}
+
+.navbar .menu__item.item--selected,
+.navbar .menu__item:hover {
+    border-bottom: 2px solid orange;
+}
+
+.navbar .menu__dropdown::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.navbar .menu__dropdown:hover > .menu__dropdown__submenu {
+    display: block;
+    z-index: 1;
+}
+
+.navbar .menu__dropdown__submenu {
+    position: absolute;
+    background: var(--primary1);
+    min-width: 150px;
+    box-shadow: 6px 6px 5px 2px #0808086b;
+    display: none;
+}
+
+.navbar .menu__dropdown__submenu .menu__item {
+    border-bottom: 2px solid orange;
+}
+
+.navbar .menu__dropdown__submenu .menu__item:last-child {
+    border-bottom: none;
+}
+
+.navbar .menu__dropdown__submenu .menu__item a {
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar .contato a {
+    display: block;
+    font-weight: 800;
+    color: var(--text-color1);
+}
+
+/* Main > Hero > Slider */
+.main {
+    padding-bottom: 25px;
+}
+
+.hero {
+    position: relative;
+    height: 600px;
+}
+
+.hero .slider {
+    height: 100%;
+    position: absolute;
+    z-index: -5;
+    left: 0;
+    display: flex;
+}
+
+.hero .slider img {
+    width: 100vw;
+    object-fit: cover;
+}
+
+.main-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.main-info h1 {
+    font-size: 5rem;
+    line-height: 60px;
+}
+.main-info h2 {
+    margin-top: 20px;
+    color: orange;
+}
+
+.main-info strong {
+    color: orange;
+}
+
+.main-info .contato a {
+    font-weight: 500;
+    font-size: 4rem;
+    color: white;
+}
+
+.main-info .contato span {
+   font-size: 4rem;
+   font-weight: 600;
+   margin: 0 20px;
+}
+
+/* Footer  */
+.footer {
+    background: #111111;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}

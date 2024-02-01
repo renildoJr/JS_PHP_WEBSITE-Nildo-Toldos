@@ -5,36 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nildo Toldos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header Start -->
     <header class="header">
-        <nav class="navbar">
-            <!-- Header Logo -->
-            <h3 class="logo"><a href="/">Nildo Toldos</a></h3>
-
-            <!-- Header Menu -->
-            <ul class="menu">
-                <li class="menu__item"><a href="/">Home</a></li>
-                <li class="menu__item"><a href="#">Sobre Nós</a></li>
-                <li class="menu__item menu_dropdown"><a href="/">Nossos Produtos</a>
-                    <ul class="menu__dropdown__submenu">
-                        <li class="menu__item">Toldos em Lona</li>
-                        <li class="menu__item">Toldos em Policarbonato</li>
-                        <li class="menu__item">Tendas</li>
-                        <li class="menu__item">Lonas Retrátil</li>
-                        <li class="menu__item">Cobertas Personalizadas</li>
-                    </ul>
-                </li>
-                <li class="menu__item"><a href="#">Nossa Galeria</a></li>
-            </ul>
-
-            <!-- Header Contato  -->
-            <div class="contato">
-                <a href="tel:81 3224-1862"><i class="fa-solid fa-phone"></i>81 3224-1862</a>
-                <a href="https://api.whatsapp.com/send?phone=5581983687284"><i class="fa-brands fa-whatsapp"></i>81 98368-7284</a>
-            </div>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <!-- Header Logo -->
+                <h3 class="logo"><a href="/">Nildo Toldos</a></h3>
+    
+                <!-- Header Menu -->
+                <ul class="menu">
+                    <li class="menu__item item--selected"><a href="/">Home</a></li>
+                    <li class="menu__item"><a href="#">Sobre Nós</a></li>
+                    <li class="menu__item menu__dropdown"><a href="/">Nossos Produtos</a>
+                        <ul class="menu__dropdown__submenu">
+                            <li class="menu__item"><a href="#">Toldos em Lona</a></li>
+                            <li class="menu__item"><a href="#">Toldos em Policarbonato</a></li>
+                            <li class="menu__item"><a href="#">Tendas</a></li>
+                            <li class="menu__item"><a href="#">Lonas Retrátil</a></li>
+                            <li class="menu__item"><a href="#">Cobertas Personalizadas</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a href="#">Nossa Galeria</a></li>
+                </ul>
+    
+                <!-- Header Contato  -->
+                <div class="contato">
+                    <a href="tel:81 3224-1862"><i class="fa-solid fa-phone"></i> 81 3224-1862</a>
+                    <a href="https://api.whatsapp.com/send?phone=5581983687284" target="_blank"><i class="fa-brands fa-whatsapp"></i> 81 98368-7284</a>
+                </div>
+            </nav>
+        </div>
     </header>
     <!-- Header End -->
 
@@ -43,18 +46,46 @@
         <!-- Main Hero -->
         <div class="hero">
             <!-- Hero Slider -->
-            <div class="slider"></div>
+            <div class="slider">
+                <div class="overlay"></div>          
+                <img src="images/slider/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg" alt="">
+                <img src="images/slider/download.jpg" alt="">
+                <img src="images/slider/lightning-at-adelaide-airport-rowland-beardsell-2015-calendar-resize.jpg" alt="">
+                <img src="images/slider/Nissan-Sentra-1.jpg" alt="">
+                <img src="images/slider/unnamed.jpg" alt="">
+            </div>
             <div class="main-info">
-                <h1>Toldos e Cobertas em Lona e Policarbonato Apartir de R$200,00 1M²</h1>
-                 <!-- Main Contato  -->
-                <div class="contato">
-                    <a href="tel:81 3224-1862"><i class="fa-solid fa-phone"></i>81 3224-1862</a>
-                    <a href="https://api.whatsapp.com/send?phone=5581983687284"><i class="fa-brands fa-whatsapp"></i>81 98368-7284</a>
+                <div class="container">
+                    <h1>Toldos e Cobertas em Lona<br> e Policarbonato Apartir de <br><strong>R$200,00 1M²</strong></h1>
+                    <h2>Orçamento sem compromisso</h2>
+                     <!-- Main Contato  -->
+                    <div class="contato">
+                        <a href="tel:81 3224-1862"><i class="fa-solid fa-phone"></i> 81 3224-1862</a><span>/</span>
+                        <a href="https://api.whatsapp.com/send?phone=5581983687284" target="_blank"><i class="fa-brands fa-whatsapp"></i> 81 98368-7284</a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
+
+            <!-- Teste -->
+            <section class="section">
+                <header>
+                    <h2>Este é um teste</h2>
+                </header>
+                <div class="content">
+                    <p>Há mais de 10 anos no mercado, nosso foco é a satisfação</p>
+                </div>
+            </section>
         </div>
     </main>
     <!-- Main End -->
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <span><strong>Nildo Toldos</strong> 2024 - &copy; Copyright </span>
+        </div>
+    </footer>
 </body>
 </html>
