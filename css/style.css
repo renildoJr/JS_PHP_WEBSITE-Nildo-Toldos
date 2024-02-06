@@ -17,12 +17,12 @@
 }
 
 body {
+    background: #fafafa;
     font-size: 1.6rem;
     font-family: 'Poppins', Arial;
     overflow-x: hidden;
     color: var(--text-color1);
     position: relative;
-
     min-height: 100vh;
 }
 
@@ -60,8 +60,6 @@ body {
     font-weight: 800;
     margin-bottom: 26px;
     text-align: center;
-    /* padding: 10px; */
-    /* border-bottom: 2px solid var(--primary1); */
     color: var(--dark1);
 }
 
@@ -101,6 +99,10 @@ i {
 .header {
     background: var(--primary1);
     box-shadow: 0 0 5px 2px #08080891;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
 }
 
 .navbar {
@@ -140,6 +142,7 @@ i {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     color: var(--primary2);
+    margin-left: 5px;
 }
 
 .navbar .menu__dropdown:hover > .menu__dropdown__submenu {
@@ -187,10 +190,6 @@ i {
 }
 
 /* Main > Hero > Slider */
-.main {
-    padding-bottom: 25px;
-}
-
 .hero {
     position: relative;
     height: calc(100vh - 300px);
@@ -201,13 +200,17 @@ i {
     height: 100%;
     position: absolute;
     z-index: -5;
-    left: 0;
     display: flex;
+    /* left: 0;     */
 }
 
 .hero .slider img {
     width: 100vw;
+    z-index: -20;
     object-fit: cover;
+    position: relative;
+    right: 0%;
+    transition: .3s ease-in-out;
 }
 
 .main-info {
@@ -273,6 +276,13 @@ i {
 }
 
 /* Cards */
+.card {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 #0000001a;
+    background: white;
+}
+
 .card i {
     font-size: 4rem;
     margin-bottom: 20px;
@@ -327,7 +337,15 @@ i {
 
 #galeria .card-image {
     position: relative;
+    cursor: pointer;
+    overflow: hidden;
 }
+
+#galeria .card-image:hover > img {
+    transform: scale(1.4);
+    transition: .3s ease-in-out;
+}
+
 #galeria .card-image .card-info {
     position: absolute;
     left: 0;
@@ -367,7 +385,7 @@ p {
 }
 
 .prod-section {
-    margin-top: 50px;
+    margin-top: 150px;
     min-height: 50vh;
 }
 
@@ -380,7 +398,45 @@ p {
     margin-top: 10px;
 }
 
+#stepByStep ul {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+#stepByStep .arrow {
+    font-size: 4rem;
+}
+
+#stepByStep ul li {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 #7a7c7e56;
+    background: rgb(192, 220, 238);
+    font-weight: 600;
+    width: 200px;
+}
+
+#stepByStep ul li i {
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+
+#info {
+    background: rgba(128, 128, 128, 0.267);
+    padding: 20px;
+}
+
 @media (max-width: 1120px) {
+    .col-2 {
+        gap: 20px;
+    }
+
     /* Header */
     .navbar {
         padding: 10px;
@@ -457,9 +513,32 @@ p {
     .low-height .main-info p {
         font-size: 1.6rem;
     }
+
+    #stepByStep .arrow {
+        font-size: 2rem;
+    }
+    
+    /* Step By Step */
+    #stepByStep ul {
+        gap: 10px;
+    }
+
+    #stepByStep ul li {
+        padding: 10px;
+        width: 100px;
+        font-size: 1.4rem;
+    }
+    
+    #stepByStep ul li i {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 775px) {
+    .cards.col-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     /* Header */
     .toggle {
         display: block;
@@ -484,11 +563,15 @@ p {
         top: 100%;
         left: 0;
         margin: 0;
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 0;
         width: 50%;
         z-index: 1
+    }
+
+    .navbar .menu.display--menu {
+        display: block;
     }
 
     .navbar .menu__item.item--selected {
@@ -499,18 +582,31 @@ p {
         margin-left: 10px;
     }
 
+    .navbar .menu__item.item--selected,
+    .navbar .menu__item:hover {
+        border-bottom: none;
+    }
+
     .navbar .menu__item a {
        padding: 10px 0 10px 20px  ;
        display: block;
     }
     
     .navbar .menu__dropdown__submenu {
-        display: block;
+        display: none;
         position: relative;
         z-index: 1;
         box-shadow: none;
     }
-    
+
+    .navbar .menu__dropdown:hover > .menu__dropdown__submenu {
+        display: none;
+    }
+
+    .navbar .menu__dropdown:hover > .menu__dropdown__submenu.display--menu {
+        display: block;
+    }
+
     .navbar .menu__dropdown__submenu .menu__item a {
         padding: 10px 30px;
     }
@@ -520,10 +616,18 @@ p {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px 20px;
     }
+
+    /* Step By Step */
+    #stepByStep ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #stepByStep ul .arrow {
+        display: none;
+    }
    
 }
-
-
 
 @media (max-width: 620px) {
     /* Main > Info  */

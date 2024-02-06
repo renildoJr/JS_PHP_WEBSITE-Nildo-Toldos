@@ -6,6 +6,8 @@
     <title>Nildo Toldos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/slider.js" defer></script>
 </head>
 <body>
     <!-- Header Start -->
@@ -14,18 +16,19 @@
             <nav class="navbar">
                 <!-- Header Logo -->
                 <div class="junction">
-                    <button class="btn toggle fa-solid fa-bars"></button>
+                    <button class="btn toggle fa-solid fa-bars" id="navbar_toggle"></button>
                     <h3 class="logo"><a href="/">Nildo Toldos</a></h3>
                 </div>
     
                 <!-- Header Menu -->
-                <ul class="menu">
+                <ul class="menu" id="navbar_menu">
                     <li class="menu__item item--selected"><a href="/">Home</a></li>
                     <li class="menu__item"><a href="sobrenos.html">Sobre Nós</a></li>
-                    <li class="menu__item menu__dropdown"><a href="/">Nossos Produtos</a>
+                    <li class="menu__item menu__dropdown"><a href="#">Nossos Produtos</a>
                         <ul class="menu__dropdown__submenu">
-                            <li class="menu__item"><a href="toldosemlona.html">Toldos em Lona</a></li>
-                            <li class="menu__item"><a href="#">Toldos em Policarbonato</a></li>
+                            <li class="menu__item"><a href="toldosemlona.html">Toldos com Lona</a></li>
+                            <li class="menu__item"><a href="#">Toldos com Policarbonato</a></li>
+                            <li class="menu__item"><a href="#">Toldos com Alumínio</a></li>
                             <li class="menu__item"><a href="#">Tendas</a></li>
                             <li class="menu__item"><a href="#">Lonas Retrátil</a></li>
                             <li class="menu__item"><a href="#">Cobertas Personalizadas</a></li>
@@ -45,14 +48,14 @@
     <!-- Header End -->
 
     <!-- Main Start-->
-    <main class="main prod_main">
+    <main class="main">
         <!-- Main Hero -->
         <div class="hero">
             <!-- Hero Slider -->
             <div class="slider">
-                <div class="overlay"></div>          
+                <div class="overlay"></div>
                 <img src="images/slider/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg" alt="">
-                <img src="images/slider/download.jpg" alt="">
+                <img class="test" src="images/slider/download.jpg" alt="">
                 <img src="images/slider/lightning-at-adelaide-airport-rowland-beardsell-2015-calendar-resize.jpg" alt="">
                 <img src="images/slider/Nissan-Sentra-1.jpg" alt="">
                 <img src="images/slider/unnamed.jpg" alt="">
@@ -134,6 +137,26 @@
                     <span class="card-info">Toldo em Policarbonato, Santo Amaro <time pubdate datetime="2024-03-02 12:15">02/03/2024</time></span>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <h2 class="section__title">Passo a Passo</h2>
+            <div class="container" id="stepByStep">
+                <ul>
+                    <li><i class="fas fa-comment-dots"></i>1. Entre em contato</li>
+                    <i class="arrow fa-solid fa-right-long"></i>
+                    <li><i class="fa-regular fa-newspaper"></i>2. Faça seu orçamento</li>
+                    <i class="arrow fa-solid fa-right-long"></i>
+                    <li><i class="fa-solid fa-location-dot"></i>3. Visitamos o local (se preferir)</li>
+                    <i class="arrow fa-solid fa-right-long"></i>
+                    <li><i class="fa-solid fa-hammer"></i>4. Processo de fabricação</li>
+                    <i class="arrow fa-solid fa-right-long"></i>
+                    <li><i class="fa-solid fa-truck-moving"></i>5. Entrega do produto (5 dias últeis)</li>
+                </ul>
+            </div>
+        </section>
+        <section id="info">
+            <h3 style="text-align: center;">Aceitamos Cartões e PIX</h3>
         </section>
     </main>
     <!-- Main End -->
