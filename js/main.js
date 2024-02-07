@@ -1,5 +1,5 @@
 'use strict';
-document.querySelectorAll(".menu__dropdown a").forEach(a => {
+document.querySelectorAll(".menu__dropdown > a").forEach(a => {
     a.addEventListener("click", e => {
         e.preventDefault();
     });
@@ -13,3 +13,14 @@ function toggle(element1 = {}, element2 = {}, elementClassName = "") {
         element2.classList.toggle(elementClassName);
     });
 }
+
+const body = document.body;
+
+document.addEventListener('scroll', function() {
+    const header =document.querySelector(".header");
+    if(window.scrollY > 0) {
+        header.style.position="fixed";
+    }else {
+        header.style.position = "relative";
+    }
+});
