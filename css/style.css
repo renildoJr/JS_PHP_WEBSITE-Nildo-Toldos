@@ -241,7 +241,6 @@ i {
     position: absolute;
     z-index: -5;
     display: flex;
-    /* left: 0;     */
 }
 
 .hero .slider img {
@@ -399,6 +398,7 @@ i {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    height: 200px;
 }
 
 #galeria .card-image.card--invisible {
@@ -411,6 +411,7 @@ i {
 }
 
 #galeria .card-image .card-info {
+    width: 100%;
     position: absolute;
     left: 0;
     bottom: 0;
