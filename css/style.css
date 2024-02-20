@@ -32,7 +32,7 @@ body {
     background: none;
     border: none;
     font-size: 2.5rem;
-    color: var(--primary2);
+    color: var(--primary1);
     display: none;
 }
 
@@ -158,7 +158,7 @@ i {
 .navbar .logo a {
     font-size: 2.5rem;
     font-weight: 900;
-    color: var(--primary1);
+    color: var(--text-color1);
     text-shadow: 1px 1px var(--text-color1);
 }
 
@@ -234,7 +234,8 @@ i {
 /* Main > Hero > Slider */
 .hero {
     position: relative;
-    height: calc(100vh - 200px);
+    /* height: calc(100vh - 200px); */
+    height: 600px;
     margin-bottom: 50px;
 }
 
@@ -330,6 +331,10 @@ i {
 .card i {
     font-size: 3rem;
     margin-bottom: 20px;
+}
+
+.card p {
+    font-weight: 600;
 }
 
 /* Outros */
@@ -543,7 +548,7 @@ p {
     /* Main > Hero */
     .hero {
         position: relative;
-        max-height: calc(100vh - 300px);
+        height: 450px;
         margin-bottom: 50px;
     }    
 
@@ -615,7 +620,7 @@ p {
 @media(max-width: 968px) {
     /* Main > Hero */
     .hero {
-        max-height: calc(100vh - 250px);
+        height: 400px;
     }    
 
 }
@@ -652,8 +657,14 @@ p {
         display: none;
         flex-direction: column;
         gap: 0;
-        width: 50%;
+        width: 100%;
         z-index: 1
+    }
+
+    .navbar .menu li a {
+        color: var(--primary2);
+        padding: 20px;
+        font-size: 1.6rem;
     }
 
     .navbar .menu.display--menu {
@@ -683,6 +694,7 @@ p {
         position: relative;
         z-index: 1;
         box-shadow: none;
+        background: #202020;
     }
 
     .navbar .menu__dropdown:hover > .menu__dropdown__submenu {
@@ -694,7 +706,7 @@ p {
     }
 
     .navbar .menu__dropdown__submenu .menu__item a {
-        padding: 10px 30px;
+        padding: 20px 30px;
     }
 
     /* Main > Galeria */
